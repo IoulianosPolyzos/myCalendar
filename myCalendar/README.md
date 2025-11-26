@@ -23,7 +23,7 @@ This project is an implementation of a calendar using a desktop (GUI) applicatio
 
 
 
-## Οδηγίες Εκτέλεσης
+## Execution Instructions:
 
 To run the application, follow these steps:
 
