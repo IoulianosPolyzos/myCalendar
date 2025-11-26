@@ -1,46 +1,42 @@
-# Εργασία: Υλοποίηση Ημερολογίου σε Java
+# Project: Implementation of a Calendar in Java
 
-Αυτή η εργασία αποτελεί μια υλοποίηση ενός ημερολογίου με τη χρήση παραθυριακής εφαρμογής.
-
-## Κλάσεις και Interface
-
+This project is an implementation of a calendar using a desktop (GUI) application.
+## Classes and Interface:
 
 
- - **Main**: Εκτέλεση του προγράμματος μαζί με τους απαραίτητους ελέγχους για τις επενθυμίσεις (alarms).
 
-- **Event**: Υπερκλάση που έχει τα βασικά χαρακτηριστικά  τη δομή ενός γεγονότος καθώς και το χειρισμό ενός ical αρχείου(write, save, check valid file) .
+ - **Main**: Executes the program and handles necessary checks for reminders (alarms).
 
-- **Appointment**: Υποκλάση της Event που κληρονομεί τα χαρακτηριστικά ενός γεγονότος και προσθέτει και τη διάρκεια (Duration) για ένα ραντεβού. Επίσης σε αυτή τη κλάση γίνεται προσθήκη ενός appointment στο ημερολόγιο με τη χρήση της αντίστοιχης μεθόδου. 
+- **Event**: Superclass containing the basic attributes and structure of an event, as well as handling of an iCal file (write, save, check valid file).
 
-- **Task**: Υποκλάση της Event που κληρονομεί τα χαρακτηριστικά ενός γεγονότος και προσθέτει και τη προθεσμία (Deadline) για μια εργασία. Επίσης σε αυτή τη κλάση γίνεται προσθήκη ενός task στο ημερολόγιο με τη χρήση της αντίστοιχης μεθόδου. 
+- **Appointment**: Subclass of Event that inherits event attributes and adds a Duration for an appointment. This class also includes methods to add an appointment to the calendar.
 
-- **ListPanel**: Κλάση που κληρονομεί τη JPanel και χρησιμοποιείται για το χειρισμό των array lists και τη σωστή εμφάνιση τους (κουμπί display).
+- **Task**: Subclass of Event that inherits event attributes and adds a Deadline for a task. This class also includes methods to add a task to the calendar.
 
-- **FramesManagement**: Κλάση που χειρίζεται όλα τα παράθυρα και τα αντίστοιχα κουμπιά.
+- **ListPanel**: Inherits from JPanel and is used to handle array lists and display them correctly (with a display button).
 
-- **TaskListPanel**: Αντίστοιχη με την ListPanel αλλά για τον χειρισμό των arraylists που αφορούν τις εργασίες (Due,ToDo).
+- **FramesManagement**: Handles all windows and their respective buttons.
 
- - **ArrayListModel**: Κλάση που κληρονομεί την AbstractListModel και υποστηρίζει την λειτουργικότητα των ListPanel και TaskListPanel αντίστοιχα.
+- **TaskListPanel**: Similar to ListPanel, but specifically for handling array lists related to tasks (Due, ToDo).
+ - **ArrayListModel**: Inherits from AbstractListModel and supports the functionality of ListPanel and TaskListPanel.
 
 
 
 
 ## Οδηγίες Εκτέλεσης
 
-Για να εκτελέσετε την εφαρμογή, ακολουθήστε τα παρακάτω βήματα:
+To run the application, follow these steps:
 
-1. Ανοίγουμε ένα τερματικό, και πηγαίνουμε στο φάκελο του project που περιέχει το αρχείο pom.xml
-2. Γράφουμε στο τερματικό την εντολή `mvn package` . Δημιουργείται το αρχείο jar .
-3. Έπειτα πηγαίνουμε στο φάκελο `target` που δημιουργήθηκε το αρχείο jar . 
-4. Γράφουμε στο τερματικό την εντολή `java -jar myCalendar-1.0-SNAPSHOT.jar ` για να εκτελέσουμε το πρόγραμμα .
+1. Open a terminal and navigate to the project folder containing the pom.xml file.
+2. Run the command: `mvn package` . This will create the .jar file.
+3. Go to the target folder where the .jar file was created.
+4. Run the command: `java -jar myCalendar-1.0-SNAPSHOT.jar ` to execute the program.
 
-- **Στο φάκελο του project περιέχεται πέρα από το report και ένα δοκιμαστικό αρχείο τύπου ics.**
+- *The project folder also contains a report and a sample .ics file for testing.**
 
 
 ---
 
-Αυτό το README περιέχει μια σύντομη περιγραφή της εργασίας και ορισμένες οδηγίες για το πώς να χρησιμοποιήσετε τον κώδικα. Η έκδοση της γλώσσας java που γράφτηκε ο κώδικας είναι η 17 LTS.
+This README provides a brief description of the project and instructions for using the code. The project was implemented using Java 17 LTS.
 
-- **Authors:**
-- **Κωνσταντίνος Κωτσαράς (it2022050)**
-- **Ιουλιανός Πολύζος (it2022091)**
+
